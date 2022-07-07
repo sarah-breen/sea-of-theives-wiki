@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sea Of Thieves</title>
+  </head>
+
+  <style>
+    h1 {
+      font-size: 32px;
+      text-shadow: 2px 2px #5e331f;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      color: #babe66;
+    }
+    h2 {
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      font-size: 18px;
+      border-radius: 20px;
+    }
+    hr {
+      height: 3px;
+      background-color: #e6e9af;
+      border: none;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
+    p {
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      line-height: 1.5;
+      font-size: 14px;
+      clear: right;
+    }
+    .learn-more {
+      display: block;
+      color: #e6e9af;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    button {
+      font-family: Arial, Helvetica, sans-serif;
+      display: block;
+      margin: 20px auto;
+      background-color: #2c7d57;
+      color: #e6e9af;
+      border: 3px solid #8a4f33;
+      border-radius: 5px;
+      padding: 10px 15px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    }
+    button:hover {
+      opacity: 0.7;
+      cursor: pointer;
+    }
+
+    .container {
+      background-image: linear-gradient(#8a4f33, #babe66, #2c7d57);
+      border-radius: 10px;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 15px 60px;
+    }
+    .footer {
+      text-align: center;
+      margin: 0 auto;
+      font-size: 10px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Let's Play Sea Of Thieves!</h1>
+
+      <h2>A Pirate Experience!</h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/030/220/original/Sea_of_thieves_cover_art.jpg?1648408500"
+      />
+      <hr />
+      <p>
+        <span style="font-weight: bold">Sea of Thieves</span> is a first-person
+        action-adventure game developed by Rare and published by Microsoft
+        Studios. In the game, players explore an open world via a
+        <em>pirate ship</em>.<br />
+
+        <a
+          href="https://www.seaofthieves.com/"
+          target="_blank"
+          class="learn-more"
+          ><strong>Learn more here </strong>🦜</a
+        >
+      </p>
+
+      <button class="download-button">🏴‍☠️ Download and Play!</button>
+      <p class="footer">This page was coded by Sarah Breen</p>
+    </div>
+    <script>
+      function downloadName() {
+        let name = prompt("What is your name?");
+
+        if (name.length == 0) {
+          alert("No name, no game!");
+          download();
+        } else {
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = "It's a pirates life for you, " + name + "! ⚓";
+        }
+        let email = prompt("What is your email address?");
+        let opsys = prompt("What operating system are you using?");
+        alert(
+          "Thanks for downloading, " +
+            name +
+            "! Sea of Thieves for " +
+            opsys +
+            " will start downloading automatically! Happy Pirating! Arrrr 🏴‍☠️"
+        );
+      }
+      let downloadButton = document.querySelector(".download-button");
+      downloadButton.addEventListener("click", downloadName);
+    </script>
+  </body>
+</html>
